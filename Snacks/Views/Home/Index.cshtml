@@ -1,4 +1,6 @@
-﻿@{
+﻿@using System.Globalization
+
+@{
     ViewData["Title"] = "Home Page";
 
     // SNACK 1
@@ -56,6 +58,11 @@
 
     List<int> nums = RandomNum(20);
     List<int> numeriCompresi = ShowNums(nums, 20, 70);
+
+    // SANCK 5 Uso CulterInfo per impostare globalmente la data e ora in formato italiano
+    CultureInfo italiana = new CultureInfo("it-IT");
+    CultureInfo.DefaultThreadCurrentCulture = italiana;
+    CultureInfo.DefaultThreadCurrentUICulture = italiana;
 }
 
 <div class="text-center">
@@ -78,7 +85,8 @@
 
     @*Creare una List<int> di 20 numeri interi (generati random da 1 a 90, 1 e 90 inclusi) e mostrare in pagina solo i numeri compresi tra 20 e 70.*@
     <h1 class="text-success mt-4">Snack 4</h1>
-    <p>Abbiamo una lista di numeri generati randomicamente:
+    <p>
+        Abbiamo una lista di numeri generati randomicamente:
         @foreach (var num in numeriCompresi)
         {
             <span>@num,</span>
@@ -87,6 +95,7 @@
 
     @*Stampare in pagina la data e l'ora attuale (usando la classe DateTime) con il formato anno-mese-giorno ore:minuti:secondi.*@
     <h1 class="text-success mt-4">Snack 5</h1>
+    <p>Data e ora corrente in formato italiano: @DateTime.Now</p>
 
     @*Partendo dalla data di oggi (usando la classe DateTime) stampare in pagina
         a. la data di 7 giorni fa
