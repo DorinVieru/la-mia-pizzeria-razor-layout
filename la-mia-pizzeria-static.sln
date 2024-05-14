@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "la-mia-pizzeria-static", "la-mia-pizzeria-static\la-mia-pizzeria-static.csproj", "{DA0F5300-852A-451D-BA1A-8FB60F17C481}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snacks", "Snacks\Snacks.csproj", "{AECFE489-1D3F-49CB-89BB-64D7795F00A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snacks", "Snacks\Snacks.csproj", "{AECFE489-1D3F-49CB-89BB-64D7795F00A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PizzaBomba</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/la-mia-pizzeria-static.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        @Html.Partial("Header")
+    </header>
+
+    <div class="container-fluid position-relative" style="background-image: url('@Url.Content("~/img/jumbo-pizza.jpg")'); 
+                                                        height: 550px; 
+                                                        background-repeat: no-repeat; 
+                                                        background-size: cover; 
+                                                        background-position: center;"
+                                                    ;>
+        <div class="overlay"></div>
+        <div class="text-center text-white position-absolute top-50 start-50 translate-middle">
+            <h1 class="fw-bold display-4">Pizze bomba!</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <main role="main" class="py-4">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - la_mia_pizzeria_static - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
