@@ -1,11 +1,24 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-    
+
     // SNACK 1
     string nome = "Dorin";
     string cognome = "Vieru";
 
     // SNACK 2
+    static int AddNum(int n)
+    {
+        int sum = 0;
+        for (int i = 1; i <= n; i++)
+        {
+            sum += i;
+        }
+        return sum;
+    }
+    int n = 77; 
+    int sum = AddNum(n);
+
+    //SNACK 3
 
 }
 
@@ -21,6 +34,7 @@
 
     @* Creare una funzione che stampa la somma dei numeri che vanno da 1 a n (con n passato come parametro - n incluso) Stampare dentro uno span il risultato.*@
     <h1 class="text-success mt-4">Snack 2</h1>
+    <span>La somma dei numeri da 1 a @n è: <strong>@sum</strong>.</span>
 
     @*Contare quante volte la lettera a è presente nalla frase "nel mezzo del cammin di nostra vita" e stampare questo valore in pagina.*@
     <h1 class="text-success mt-4">Snack 3</h1>
