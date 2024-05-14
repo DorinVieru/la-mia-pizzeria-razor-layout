@@ -1,3 +1,4 @@
+/* INDICAZIONI GENERALI */
 html {
   font-size: 17px;
 }
@@ -13,8 +14,29 @@ html {
   min-height: 100%;
 }
 
-body {
+/*body {
   margin-bottom: 60px;
+}*/
+
+/* HEADER */
+header {
+    background-image: url('../img/sfondo-header-footer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+li {
+    font-size: 20px;
+}
+
+/* JUMBOTRON */
+.jumbo {
+    background-image: url('../img/jumbo-pizza.jpg');
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .overlay {
@@ -26,6 +48,11 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-li{
-    font-size: 20px;
+/* FOOTER */
+footer {
+    background-image: url('../img/sfondo-header-footer.png');
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
