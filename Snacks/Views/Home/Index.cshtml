@@ -63,6 +63,16 @@
     CultureInfo italiana = new CultureInfo("it-IT");
     CultureInfo.DefaultThreadCurrentCulture = italiana;
     CultureInfo.DefaultThreadCurrentUICulture = italiana;
+
+    // SNACK 6
+    DateTime today = DateTime.Today;
+
+    DateTime lastWeek = today.AddDays(-7);
+
+    string NextSevenDays = today.ToString("dddd");
+
+    DateTime nextYear = today.AddYears(1);
+    string dayNextYear = nextYear.ToString("D");
 }
 
 <div class="text-center">
@@ -102,4 +112,7 @@
         b. che giorno della settimana è oggi (il risultato dovrà  essere il nome del giorno (Lunedì, Martedì, ...)
         c. che giorno della settimana sarà  nello stesso giorno e mese di oggi ma tra un anno (il risultato dovrà  essere il nome del giorno (Lunedì, Martedì, ...)*@
     <h1 class="text-success mt-4">Snack 6</h1>
+    <p>Data di 7 giorni fa rispetto ad oggi: @lastWeek.ToShortDateString()</p>
+    <p>Giorno della settimana oggi: @NextSevenDays</p>
+    <p>Giorno della settimana tra un anno: @dayNextYear</p>
 </div>
